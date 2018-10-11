@@ -50,6 +50,23 @@ class ViewController: UIViewController {
         caculaterDispiay.text = caculaterDispiay.text!+"9"
     }
     
+    @IBAction func button0(_ sender: Any) {
+        caculaterDispiay.text = caculaterDispiay.text!+"0"
+    }
+    
+    
+    @IBAction func button10(_ sender: Any) {
+        caculaterDispiay.text = caculaterDispiay.text!+"."
+    }
+    
+    
+    
+    @IBAction func buttonpercent(_ sender: Any) {
+        temp = Double(caculaterDispiay.text!)!
+        temp=temp*0.01;
+        caculaterDispiay.text = "\(temp)"
+    }
+    
     @IBAction func buttonCaculator(_ sender: Any) {
         
         if(flag==1){
@@ -109,6 +126,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+//$$$$$$$$$$$$$$$$$
 }
 
