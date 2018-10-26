@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     var temp = 0.00
     var flag = 0
     
@@ -54,12 +55,22 @@ class ViewController: UIViewController {
         caculaterDispiay.text = caculaterDispiay.text!+"0"
     }
     
-    
     @IBAction func button10(_ sender: Any) {
         caculaterDispiay.text = caculaterDispiay.text!+"."
     }
     
+    @IBAction func button11(_ sender: Any) {
+        caculaterDispiay.text = caculaterDispiay.text!+"3.1415926535"
+    }
     
+    @IBAction func button12(_ sender: Any) {
+        caculaterDispiay.text = caculaterDispiay.text!+"2.71828"
+    }
+    @IBAction func buttonsquare(_ sender: Any) {
+        temp = Double(caculaterDispiay.text!)!
+        temp=temp*temp;
+        caculaterDispiay.text = "\(temp)"
+    }
     
     @IBAction func buttonpercent(_ sender: Any) {
         temp = Double(caculaterDispiay.text!)!
@@ -67,11 +78,26 @@ class ViewController: UIViewController {
         caculaterDispiay.text = "\(temp)"
     }
     
+    @IBAction func buttonsqrt(_ sender: Any) {
+        temp = Double(caculaterDispiay.text!)!
+        temp=sqrt(temp);
+        caculaterDispiay.text = "\(temp)"
+    }
+    
+    
+    @IBAction func buttonnegative(_ sender: Any) {
+        temp = Double(caculaterDispiay.text!)!
+        temp = -1*temp;
+        caculaterDispiay.text = "\(temp)"
+        
+    }
+    
     @IBAction func buttonCaculator(_ sender: Any) {
         
         if(flag==1){
             var sum = 0.00
             sum = temp + Double(caculaterDispiay.text!)!
+            sum = temp + sum
             caculaterDispiay.text = "\(sum)"
         }
         
@@ -120,12 +146,6 @@ class ViewController: UIViewController {
         caculaterDispiay.text = ""
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
-//$$$$$$$$$$$$$$$$$
 }
 
